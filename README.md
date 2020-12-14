@@ -12,7 +12,5 @@ Here you can find the slides and the PDF of the paper:  [PDF](https://github.com
 Note that all the utilities and data can be downloaded in the folloing dropbox link: 
 [Data and Utils](https://www.dropbox.com/sh/2f9ktwo6ped1470/AADIwOiN0oh3GKFQPI0VWqLKa?dl=0)
 
-Contact: [Ali Hashemi](https://www.linkedin.com/in/alihashemi-ai/)
-
-Email:ali.hashemi@charite.de
+Contact: [Ali Hashemi](https://www.linkedin.com/in/alihashemi-ai/) (ali.hashemi@charite.de)
 
