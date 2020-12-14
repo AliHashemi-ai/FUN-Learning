@@ -2,7 +2,7 @@
 
 This repository contains the codes for producing results in the following paper: [Joint Hierarchical Bayesian Learning of Full-structure Noise for Brain Source Imaging](https://www.google.com/url?q=http%3A%2F%2Fwww.cse.cuhk.edu.hk%2F~qdou%2Fpublic%2Fmedneurips2020%2F39_MedNeurIPS_2020_Workshop_FUN_learning_Hashemi_et_al_Camera_ready.pdf&sa=D&sntz=1&usg=AFQjCNGNraBV-8mkkCfRQcZEA8m9Ks2ZIA), that has been presented in the [Medical Imaging Meets NeurIPS (Med-NeurIPS) 2020 workshop](https://sites.google.com/view/med-neurips-2020/home?authuser=0). 
 
-This is joint work with Chang Cai, Klaus-Robert Mueller, Srikantan S. Nagarajan, and Stefan Haufe. 
+This is joint work with [Chang Cai](https://www.researchgate.net/profile/Chang_Cai22), [Klaus-Robert Mueller](https://www.ml.tu-berlin.de/menue/members/klaus-robert_mueller/), [Srikantan S. Nagarajan](https://profiles.ucsf.edu/srikantan.nagarajan), and [Stefan Haufe](https://braindata.charite.de/metas/person/person/address_detail/haufe/). 
 
 Please check the following link for a brief introduction on this work:  [Talk](https://slideslive.com/38943007/joint-hierarchical-bayesian-learning-of-fullstructure-noise-for-brain-source-imaging)
 
