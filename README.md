@@ -13,5 +13,6 @@ Note that all the utilities and data can be downloaded in the folloing dropbox l
 [Data and Utils](https://www.dropbox.com/sh/2f9ktwo6ped1470/AADIwOiN0oh3GKFQPI0VWqLKa?dl=0)
 
 Contact: [Ali Hashemi](https://www.linkedin.com/in/alihashemi-ai/)
-email:ali.hashemi@charite.de
+
+Email:ali.hashemi@charite.de
 
