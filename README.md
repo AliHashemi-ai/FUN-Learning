@@ -9,7 +9,7 @@ Please check the following link for a brief introduction on this work:  [Talk](h
 Here you can find the slides and the PDF of the paper:  [PDF](https://github.com/AliHashemi-ai/FUN-Learning/blob/main/MedNeurIPS_2020_Workshop_FUN_learning_Hashemi_et_al_Camera_ready.pdf) &  [Slide](https://github.com/AliHashemi-ai/FUN-Learning/blob/main/MedNeurIPS_2020_Talk%20Final.pdf)
 
 
-Note that all the utilities and data can be downloaded in the folloing dropbox link: 
+Note that all the utilities and data can be downloaded using the folloing dropbox link: 
 [Data and Utils](https://www.dropbox.com/sh/2f9ktwo6ped1470/AADIwOiN0oh3GKFQPI0VWqLKa?dl=0)
 
 Contact: [Ali Hashemi](https://www.linkedin.com/in/alihashemi-ai/) (ali.hashemi@charite.de)
