@@ -134,7 +134,7 @@ while(~Converge_X)
     C_noise = (M - N + sum(diag(inv(Sigma_X))./gammas_old)); 
     scale = M_noise / C_noise; 
 
-    % --- for more efficient but less accurate version incomment below: ---  
+    % --- for more efficient but less accurate version uncomment the below code: ---  
     % Sigma_X_diag = gammas.*(1 - gammas.* sum(L .* SigmaY_invL)'); % The covariance of the posterior distribution.
     % scale = (norm(Y - L * X_bar,'fro')^2/ T) /(M - N + sum(Sigma_X_diag./gammas_old)); 
 
