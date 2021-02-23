@@ -1,5 +1,5 @@
 function [X,Gamma,NegLogLikelihood,Lambda,W] = Champ_Homoscedastic(L, Y, varargin)
-% Full-structural Noise (FUN) Learning Algorithm. 
+% Homoscedasstic Learning for the Champagne Source Localization Algorithm. 
 
 % ===== INPUTS =====
 %   L            			: M X N Lead field matrix
@@ -11,7 +11,11 @@ function [X,Gamma,NegLogLikelihood,Lambda,W] = Champ_Homoscedastic(L, Y, varargi
 %   Lambda_0    			: M X M Ground-truth noise covariance matrix. 
 %
 %   Gamma_0     			: N X N Ground-truth source covariance matrix.
-
+%
+%   noise_update_mode		: Update mode for the noise covariacne matrix 
+%							[Set to 1 for learning the noise variace, i.e. lambda = \sigma^2 OR
+% 							to 0 for the Champagne algorithm without noise learning] 
+%
 %  'max_num_iterations' 	: Maximum number of iterations.
 %
 %  'threshold_error'    	: Threshold to stop the whole algorithm. 
@@ -72,6 +76,8 @@ for i=1:2:(length(varargin)-1)
             Gamma_0 = varargin{i+1}; 
         case 'lambda_0'
             Lambda_0 = varargin{i+1}; 
+        case 'noise_update_mode'
+			noise_update_mode = varargin{i+1};	
         case 'threshold_error'   
             Threshold_error = varargin{i+1}; 
         case 'print_results'    
@@ -126,19 +132,21 @@ while(~Converge_X)
 	gammas = gammas .* sqrt(mean(abs(S).^2,2) ./ sum(L .* SigmaY_invL)');
 	Gamma = spdiags(gammas,0,N,N);
 	
-	Lambda_old = Lambda; 
- 
-    E_total = Y - L * X_bar;
-    M_noise = sum(mean(abs(E_total).^2,2));
-    Sigma_X = L' * inv(Lambda) * L + inv(Gamma_old); 
-    C_noise = (M - N + sum(diag(inv(Sigma_X))./gammas_old)); 
-    scale = M_noise / C_noise; 
+    if noise_update_mode == 1 
+        Lambda_old = Lambda; 
+        E_total = Y - L * X_bar;
+        M_noise = sum(mean(abs(E_total).^2,2));
+        Sigma_X = L' * inv(Lambda) * L + inv(Gamma_old); 
+        C_noise = (M - N + sum(diag(inv(Sigma_X))./gammas_old)); 
+        lambda = M_noise / C_noise; 
 
-    % --- for more efficient but less accurate version uncomment the below code: ---  
-    % Sigma_X_diag = gammas.*(1 - gammas.* sum(L .* SigmaY_invL)'); % The covariance of the posterior distribution.
-    % scale = (norm(Y - L * X_bar,'fro')^2/ T) /(M - N + sum(Sigma_X_diag./gammas_old)); 
+        % % --- for more efficient but less accurate version uncomment below: ---  
+        % Sigma_X_diag = gammas_old.*(1 - gammas_old.* sum(L .* SigmaY_invL)'); % The covariance of the posterior distribution.
+        % lambda = (norm(Y - L * X_bar,'fro')^2/ T) /(M - N + sum(Sigma_X_diag./gammas_old)); 
 
-    Lambda = scale * eye(M); 
+        Lambda = lambda * eye(M); 
+
+    end
  
     if print_convergence 
         fprintf('Gamma iteration error: %d \n \n ',norm(Gamma-Gamma_old,'fro'));
