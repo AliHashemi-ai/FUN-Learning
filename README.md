@@ -6,7 +6,7 @@ This is joint work with [Chang Cai](https://www.researchgate.net/profile/Chang_C
 
 Please check the following link for a brief introduction on this work:  [Talk](https://slideslive.com/38943007/joint-hierarchical-bayesian-learning-of-fullstructure-noise-for-brain-source-imaging)
 
-Here you can find the slides and the PDF of the paper:  [PDF](https://github.com/AliHashemi-ai/FUN-Learning/blob/main/MedNeurIPS_2020_Workshop_FUN_learning_Hashemi_et_al_Camera_ready.pdf) &  [Slide](https://github.com/AliHashemi-ai/FUN-Learning/blob/main/MedNeurIPS_2020_Talk%20Final.pdf)
+Here you can find the slides and the PDF of the paper:  [PDF](https://github.com/AliHashemi-ai/FUN-Learning/blob/main/Full_ms_FUN_Learning_TMI_Hashemi_et_al.pdf) &  [Slide](https://github.com/AliHashemi-ai/FUN-Learning/blob/main/MedNeurIPS_2020_Talk%20Final.pdf)
 
 
 Note that all the utilities and data can be downloaded using the folloing dropbox link: 
